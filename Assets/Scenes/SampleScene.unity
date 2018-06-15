@@ -303,7 +303,6 @@ MonoBehaviour:
   rotScale: 180
   play: 1
   time: 0
-  rlFrameNum: 0
 --- !u!4 &653173058
 Transform:
   m_ObjectHideFlags: 0

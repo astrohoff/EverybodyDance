@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraControls : MonoBehaviour {
     public float moveSpeed = 10;
     public float shiftMult = 2;
-    public float smoothTime = 1f;
+    public float smoothTime = 0.25f;
     private GameObject ballFollower;
     private Vector3 camVel = Vector3.zero;
 
@@ -14,7 +14,6 @@ public class CameraControls : MonoBehaviour {
         ballFollower = new GameObject("Ball Follower");
     }
 
-    // Update is called once per frame
     void LateUpdate () {
         float speed = moveSpeed * (Input.GetKey(KeyCode.LeftShift) ? shiftMult : 1);
         Vector3 movement = transform.forward * Input.GetAxis("Vertical") * speed * Time.deltaTime;
